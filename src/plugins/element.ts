@@ -16,7 +16,7 @@ import {
   ElAside,
   ElHeader,
 } from 'element-plus';
-import { App } from "vue";
+import { App } from 'vue';
 
 const components = [
   ElTable,
