@@ -15,6 +15,7 @@ import {
   ElContainer,
   ElAside,
   ElHeader,
+  ElScrollbar,
 } from 'element-plus';
 import { App } from 'vue';
 
@@ -30,6 +31,7 @@ const components = [
   ElContainer,
   ElAside,
   ElHeader,
+  ElScrollbar,
 ];
 
 const plugins = [ElInfiniteScroll, ElLoading, ElMessage, ElMessageBox, ElNotification];

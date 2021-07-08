@@ -1,18 +1,33 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <el-scrollbar id="lotus-scroll">
+    <router-view />
+    <lotus-header></lotus-header>
+  </el-scrollbar>
 </template>
 
+<script lang="ts">
+import { defineComponent } from 'vue';
+import lotusHeader from './components/lotusHeader.vue';
+
+export default defineComponent({
+  name: 'App',
+  components: {
+    lotusHeader,
+  },
+});
+</script>
+
 <style lang="scss">
+@import "../../assets/scss/_handle";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  @include global_background-color("global-color");
+  @include global_transition("global-transition");
+  height: 100%;
 }
 
 #nav {
