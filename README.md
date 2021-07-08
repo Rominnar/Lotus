@@ -1,4 +1,5 @@
 # lotus
+A Project Powered By Vue3 + TypeScript
 
 ## Project setup
 ```
