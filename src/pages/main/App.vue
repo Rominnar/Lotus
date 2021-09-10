@@ -1,8 +1,10 @@
 <template>
-  <el-scrollbar id="lotus-scroll">
-    <router-view />
-    <lotus-header></lotus-header>
-  </el-scrollbar>
+  <section id="lotus-scroll">
+    <el-scrollbar style="width: 100%">
+      <lotus-header class="lotus-header"></lotus-header>
+      <router-view />
+    </el-scrollbar>
+  </section>
 </template>
 
 <script lang="ts">
@@ -20,26 +22,39 @@ export default defineComponent({
 <style lang="scss">
 @import "../../assets/scss/_handle";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  @include global_background-color("global-color");
   @include global_transition("global-transition");
   height: 100%;
+  width: 100%;
+  -webkit-app-region: no-drag;
+  background: url("./../../assets/images/macos-big-sur.jpg");
+  background-size: 100% 100%;
+  background-position: left center;
 }
 
-#nav {
-  padding: 30px;
+[data-theme="light"] #app:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.72) 0%,
+    rgba(255, 255, 255, 0.45) 100%
+  );
+  -webkit-backdrop-filter: saturate(3);
+  backdrop-filter: saturate(3);
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#app #lotus-scroll {
+  min-height: 100vh;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+#app #lotus-header{
+  position: sticky;
+  top: 0;
 }
 </style>

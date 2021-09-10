@@ -1,14 +1,18 @@
 $themes: (
     dark: (
+        global-background-color: rgba(16,18,27,.4),
         global-font-size: 16px,
-        global-color: #030101,
+        global-color: #f9fafb,
         global-transition: all 0.42s ease-in,
-        global-scrollbar:  #21242d
+        global-scrollbar:  #21242d,
+        global-border-color: rgba(113,119,144,.25)
     ),
     light: (
+        global-background-color: rgba(255,255,255,.32),
         global-font-size: 18px,
-        global-color: #d7d9e4,
+        global-color:  #3c3a3a,
         global-transition: all 0.42s ease-in,
-        global-scrollbar: rgba(16,18,27,.4)
+        global-scrollbar: rgba(16,18,27,.4),
+        global-border-color: rgba(113,119,144,.25)
     ),
 );

@@ -33,8 +33,16 @@ body {
     height: 100%;
     width: 100%;
     font-size: 14px;
+    border-radius: 12px;
+    background: transparent;
+    @include global_color("global-color");
+    overflow: hidden;
     //overflow: hidden;
+    font-family: Poppins, -apple-system, BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 
 ::-webkit-scrollbar {
     width: 6px;
